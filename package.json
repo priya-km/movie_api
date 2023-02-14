@@ -1,0 +1,23 @@
+{
+  "name": "movie_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priya-km/myflix-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priya-km/myflix-app/issues"
+  },
+  "homepage": "https://github.com/priya-km/myflix-app#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
