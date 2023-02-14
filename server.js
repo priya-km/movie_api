@@ -35,7 +35,7 @@ http.createServer((request, response) => {
  // telling server to add a header to the response (200) it sends back, 200 = ok
     response.writeHead(200, { 'Content-Type': 'text/html' });
     response.write(data);
-    response.end();
+    response.end('Hello There!\n');
 
   });
     
