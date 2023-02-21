@@ -22,3 +22,5 @@ Timestamp: Tue Feb 14 2023 10:59:42 GMT-0500 (Eastern Standard Time)
 URL: /favicon.ico
 Timestamp: Tue Feb 14 2023 10:59:42 GMT-0500 (Eastern Standard Time)
 
+::1 - - [21/Feb/2023:03:14:07 +0000] "GET /documentation.html HTTP/1.1" 200 667
+::1 - - [21/Feb/2023:03:14:07 +0000] "GET /favicon.ico HTTP/1.1" 404 150
