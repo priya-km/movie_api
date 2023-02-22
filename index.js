@@ -61,11 +61,13 @@ let topMovies = [
 
 // GET requests
 app.get('/', (req, res) => {
+  console.log('Welcome to myFlix');
   res.send('Welcome to myFlix!');
 });
 
 app.get('/movies', (req, res) => {                  
-    res.json(topMovies);
+  console.log('Top movies request');
+  res.json(topMovies);
 });
 
 // Morgan middleware error handling function
