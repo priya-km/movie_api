@@ -24,3 +24,14 @@ Timestamp: Tue Feb 14 2023 10:59:42 GMT-0500 (Eastern Standard Time)
 
 ::1 - - [21/Feb/2023:03:14:07 +0000] "GET /documentation.html HTTP/1.1" 200 667
 ::1 - - [21/Feb/2023:03:14:07 +0000] "GET /favicon.ico HTTP/1.1" 404 150
+::1 - - [24/Feb/2023:00:14:05 +0000] "GET /movies HTTP/1.1" 200 3586
+::1 - - [24/Feb/2023:00:23:44 +0000] "GET /movies/Moana HTTP/1.1" 200 1808
+::1 - - [24/Feb/2023:00:23:49 +0000] "GET /movies/Moana HTTP/1.1" 200 1808
+::1 - - [24/Feb/2023:00:24:34 +0000] "GET /movies/Moana HTTP/1.1" 200 1808
+::1 - - [25/Feb/2023:18:13:54 +0000] "GET /movies/genre/action HTTP/1.1" 500 5
+::1 - - [25/Feb/2023:18:16:18 +0000] "GET /movies/genre/Action HTTP/1.1" 200 172
+::1 - - [25/Feb/2023:18:20:05 +0000] "GET /movies/directors/Ryan%20Coogler HTTP/1.1" 200 225
+::1 - - [25/Feb/2023:18:27:02 +0000] "POST /users HTTP/1.1" 500 5
+::1 - - [25/Feb/2023:18:27:28 +0000] "POST /users HTTP/1.1" 500 5
+::1 - - [25/Feb/2023:18:27:48 +0000] "POST /users HTTP/1.1" 500 5
+::1 - - [25/Feb/2023:18:29:50 +0000] "POST /users HTTP/1.1" 500 5

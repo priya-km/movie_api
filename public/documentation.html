@@ -3,10 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <title>MyFlix</title>
+        <title>MyFlix Documentation</title>
     </head>
 
     <body>
+        <div>
         <h1>myFlix</h1>
         <h2>Objective</h2>
         <p> 
@@ -15,5 +16,123 @@
             movies, directors, and genres. Users will be able to sign up, update their
             personal information, and create a list of their favorite movies. 
             </p>
+
+            <h2>Features</h2>
+    <ul>
+        <li>Return a list of ALL movies to the user</li>
+        <li>Return data (description, genre, director, image URL, whether it's featured or not) about a single movie by title to the user</li>
+        <li>Return data about a genre (description) by name/title</li>
+        <li>Return data about a director (bio, birth year, death year) by name</li>
+        <li>Allow new users to register</li>
+        <li>Allow users to update their user info</li>
+        <li>Allow users to add a movie to their list of favorites</li>
+        <li>Allow users to remove a movie from their list of favorites</li>
+        <li>Allow existing users to deregister.</li>
+    </ul>
+  </div>
+
+<h2>Endpoint Documentation</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+        <th>Business Logic</th>
+        <th>URL</th>
+        <th>HTTP Method</th>
+        <th>Query Parameters</th>
+        <th>Request Body Data Format</th>
+        <th>Response Body Data Format</th>
+    </tr>
+  </thead>
+
+ <tbody>   
+  <tr>
+      <td>Returns a list of ALL movies to the user</td>
+      <td>/movies</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>None</td>
+      <td>A JSON object containing a list of ALL movies</td>
+  </tr>
+
+  <tr>
+    <td>Returns data (description, genre, director, image URL) about a single movie by title to the user</td>
+    <td>/movies/:title</td>
+    <td>GET</td>
+    <td>None</td>
+    <td>None</td>
+    <td>A JSON object containing data about a single movie.</td>
+  </tr>
+
+  <tr>
+    <td>Returns data about a genre by title</td>
+    <td>/movies/genre/:genreName</td>
+    <td>GET</td>
+    <td>:genreName</td>
+    <td>None</td>
+    <td>A JSON object containing data about a specific genre.</td>
+  </tr>
+
+  <tr>
+    <td>Returns data about a director (bio, birth year, etc.) by name</td>
+    <td>/movies/directors/:directorName</td>
+    <td>GET</td>
+    <td>:directorName</td>
+    <td>None</td>
+    <td>A JSON object containing data about a specific director</td>
+  </tr>
+
+  <tr>
+    <td>Allows new users to register</td>
+    <td>/users</td>
+    <td>POST</td>
+    <td>None</td>
+    <td>A JSON object containing data to add for the new user, must have the following structure: <br>
+             { 
+            <br> 
+             "name": "John", <br> 
+             "favoriteMovies":[] 
+            <br> }
+        </td>
+    <td>A JSON object containing data about the new user.</td>
+  </tr>
+
+  <tr>
+    <td>Allows users to update their user info</td>
+    <td>/users/:id</td>
+    <td>PUT</td>
+    <td>:id</td>
+    <td>None</td>
+    <td>A JSON object containing the updated user information</td>
+  </tr>
+
+  <tr>
+    <td>Allows users to add a movie to their favourites</td>
+    <td>/users/:id/:movieTitle</td>
+    <td>POST</td>
+    <td>:id/:movieTitle</td>
+    <td>None</td>
+    <td>A text message indicating that the movie has successfully been added to the users favorite movies list.</td>
+  </tr>
+
+  <tr>
+    <td>Allows users to remove a movie from their favourites</td>
+    <td>/users/:id/:movieTitle</td>
+    <td>DELETE</td>
+    <td>:id/:movieTitle</td>
+    <td>None</td>
+    <td>A text message indicating that the movie has successfully been removed from the favorite movies list.</td>
+  </tr>
+
+  <tr>
+    <td>Allows existing users to deregister</td>
+    <td>/users/:id</td>
+    <td>DELETE</td>
+    <td>:id</td>
+    <td>None</td>
+    <td>A text message indicating that the user has successfully been removed/deregistered</td>
+  </tr>
+ </tbody>
+</table>
     </body>
 </html>
