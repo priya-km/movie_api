@@ -252,11 +252,11 @@ app.get('/', (req, res) => {
   res.send('Welcome to myFlix!');
 });
 
-// Top movies page
+ /* // Top movies page
 app.get('/movies', (req, res) => {                  
   console.log('Top movies request');
   res.json(topMovies);
-});
+}); */
 
 // Morgan middleware error handling function
 app.use((err, req, res, next) => {
