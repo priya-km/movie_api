@@ -57,7 +57,7 @@
 
   <tr>
     <td>Returns data (description, genre, director, image URL) about a single movie by title to the user</td>
-    <td>/movies/:title</td>
+    <td>/movies/:Title</td>
     <td>GET</td>
     <td>None</td>
     <td>None</td>
@@ -90,7 +90,11 @@
     <td>A JSON object containing data to add for the new user, must have the following structure: <br>
              { 
             <br> 
-             "name": "John", <br> 
+             "Name": "John",
+              "Username": "John",
+              "Password": "john123",
+              "Email": "John@gmail.com",
+              Birthday: "2023-07-03",
              "favoriteMovies":[] 
             <br> }
         </td>
@@ -99,36 +103,36 @@
 
   <tr>
     <td>Allows users to update their user info</td>
-    <td>/users/:id</td>
+    <td>/users/:Username</td>
     <td>PUT</td>
-    <td>:id</td>
+    <td>:Username</td>
     <td>None</td>
     <td>A JSON object containing the updated user information</td>
   </tr>
 
   <tr>
-    <td>Allows users to add a movie to their favourites</td>
-    <td>/users/:id/:movieTitle</td>
+    <td>Allows users to add a movie to their favorites</td>
+    <td>/users/:Username/movies/:MovieID</td>
     <td>POST</td>
-    <td>:id/:movieTitle</td>
+    <td>:Username/:MovieID</td>
     <td>None</td>
     <td>A text message indicating that the movie has successfully been added to the users favorite movies list.</td>
   </tr>
 
   <tr>
     <td>Allows users to remove a movie from their favourites</td>
-    <td>/users/:id/:movieTitle</td>
+    <td>/users/:Username/movies/:MovieID</td>
     <td>DELETE</td>
-    <td>:id/:movieTitle</td>
+    <td>:Username/:MovieID</td>
     <td>None</td>
     <td>A text message indicating that the movie has successfully been removed from the favorite movies list.</td>
   </tr>
 
   <tr>
     <td>Allows existing users to deregister</td>
-    <td>/users/:id</td>
+    <td>/users/:Username</td>
     <td>DELETE</td>
-    <td>:id</td>
+    <td>:Username</td>
     <td>None</td>
     <td>A text message indicating that the user has successfully been removed/deregistered</td>
   </tr>
