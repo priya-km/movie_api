@@ -13,16 +13,24 @@ const Movies = Models.Movie;
 const Users = Models.User;
 const Genres = Models.Genre;
 const Directors = Models.Director;
-// Connecting Mongoose with Rest API ad myflixDB
-mongoose.connect('mongodb://127.0.0.1:27017/myflixDB').
-  catch(error => handleError(error));
+
+const accessLogStream = fs.createWriteStream(path.join(__dirname, "log.txt"), {
+  flags: "a",
+});
+
+app.use(morgan("common", { stream: accessLogStream }));
+app.use(express.static("public"));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-let auth = require('./auth')(app); // app ensures express is available in auth,js as well
+let auth = require('./auth')(app); // app ensures express is available in auth.js as well
 const passport = require('passport');
 require('./passport');
+
+// Connecting Mongoose with Rest API ad myflixDB
+mongoose.connect('mongodb://127.0.0.1:27017/myflixDB').
+  catch(error => handleError(error));
 
 // GET
 
