@@ -76,3 +76,7 @@ Timestamp: Tue Feb 14 2023 10:59:42 GMT-0500 (Eastern Standard Time)
 ::1 - - [17/Mar/2023:17:44:37 +0000] "GET /Users/ HTTP/1.1" 201 1313
 ::1 - - [17/Mar/2023:17:46:41 +0000] "DELETE /users/test2/ HTTP/1.1" 401 -
 ::1 - - [17/Mar/2023:17:46:53 +0000] "DELETE /users/test2/ HTTP/1.1" 200 18
+::1 - - [22/Mar/2023:18:15:43 +0000] "POST /login?Username=John%20Doe&Password=Jd123 HTTP/1.1" 200 592
+::1 - - [22/Mar/2023:18:16:28 +0000] "POST /users/John%20Doe/movies/640786a74ab77cc9639263a5 HTTP/1.1" 200 207
+::1 - - [22/Mar/2023:18:17:03 +0000] "DELETE /users/John%20Doe/movies/640786a74ab77cc9639263a5 HTTP/1.1" 200 181
+::1 - - [22/Mar/2023:18:18:27 +0000] "PUT /users/John%20Doe/ HTTP/1.1" 200 186
