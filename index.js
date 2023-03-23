@@ -34,10 +34,15 @@ let auth = require("./auth")(app); // app ensures express is available in auth.j
 const passport = require("passport");
 require("./passport");
 
-// Connecting Mongoose with Rest API ad myflixDB
+// Connecting Mongoose with Rest API and myflixDB - MONGODB ATLAS
 mongoose
-  .connect("mongodb://127.0.0.1:27017/myflixDB")
+  .connect(process.env.CONNECTION_URI)
   .catch((error) => handleError(error));
+
+// Connecting Mongoose with Rest API and myflixDB - LOCALLY
+/* mongoose
+  .connect("mongodb://127.0.0.1:27017/myflixDB")
+  .catch((error) => handleError(error)); */
 
 // GET
 
