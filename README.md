@@ -10,8 +10,18 @@
 ## Links
  [Live View](https://myflixapp.onrender.com/ "Live View")
     <br>
-
-
+## API Endpoints
+ <li>POST - Allow new users to register - /users</li>
+ <li>POST - Allow users to login - /login</li>
+ <li>PUT - Allow users to update their information - /users/:username</li>
+ <li>GET - Get all movie information - /movies</li>
+ <li>GET - Get information about one movie - /movies/:Title</li>
+ <li>GET - Get information about one genre - /movies/genre/:genreName</li>
+ <li>GET - Get information about a director by name - /movies/directors/:directorName</li>
+ <li>POST - Allow users to add a movie to their favorites - :Username/:MovieID</li>
+ <li>DELETE - Allow users to remove a movie from their favorites - :Username/:MovieID</li>
+ <li>DELETE - Allow users to deregister - /users/:Username</li>
+ 
 ## Built With
   
   <li>Javascript</li>
