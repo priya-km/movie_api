@@ -22,7 +22,7 @@
  
   ## Features
   <br>
-  <p align="center">Please see documentation.html for proper request end pointsand formats</p>
+  <p align="center">Please see documentation.html for proper request end points and formats</p>
   <li>Users can sign up and login to their accounts</li>
   <li>Users who do not have an account/are not token authenticated cannot access information</li>
   <li>Authenticated users can access information as well as update their own user info, add/remove movies from their favorites, and delete their account.</li>
