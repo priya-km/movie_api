@@ -245,20 +245,16 @@ app.delete(
 );
 
 // READ - Get list of all movies
-app.get(
-  "/movies",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    Movies.find() /* Querying movies model and grabbing all data from movies collection */
-      .then((movies) => {
-        res.status(200).json(movies);
-      })
-      .catch((err) => {
-        console.error(err);
-        res.status(500).send("Error: " + err);
-      });
-  }
-);
+app.get("/movies", (req, res) => {
+  Movies.find() /* Querying movies model and grabbing all data from movies collection */
+    .then((movies) => {
+      res.status(200).json(movies);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send("Error: " + err);
+    });
+});
 // Find movie by title
 app.get(
   "/movies/:Title",
