@@ -256,21 +256,17 @@ app.get("/movies", (req, res) => {
     });
 });
 // Find movie by title
-app.get(
-  "/movies/:Title",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    Movies.findOne({ Title: req.params.Title })
-      .then((movies) => {
-        res.json(movies);
-      })
-      .catch((err) => {
-        /* error handling */
-        console.error(err);
-        res.status(500).send("Error: " + err);
-      });
-  }
-);
+app.get("/movies/:Title", (req, res) => {
+  Movies.findOne({ Title: req.params.Title })
+    .then((movies) => {
+      res.json(movies);
+    })
+    .catch((err) => {
+      /* error handling */
+      console.error(err);
+      res.status(500).send("Error: " + err);
+    });
+});
 
 // Find movie by genre
 app.get(
