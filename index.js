@@ -35,9 +35,11 @@ const passport = require("passport");
 require("./passport");
 
 // Connecting Mongoose with Rest API and myflixDB - MONGODB ATLAS
-mongoose
-  .connect(process.env.CONNECTION_URI)
-  .catch((error) => handleError(error));
+
+const uri = process.env.MONGODB_URI;
+
+mongoose.connect(process.env.MONGODB_URI).catch((error) => handleError(error));
+// updated from CONNECTION_URI
 
 // Connecting Mongoose with Rest API and myflixDB - LOCALLY
 /* mongoose
