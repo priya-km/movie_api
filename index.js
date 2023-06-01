@@ -18,11 +18,11 @@ const Genres = Models.Genre;
 const Directors = Models.Director;
 
 const cors = require("cors");
-/* let allowedOrigins = [
+let allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:1234",
-  "https://myflixpkm.netlify.app/",
-]; */
+  "https://myflixpkm.netlify.app",
+];
 app.use(cors());
 
 const accessLogStream = fs.createWriteStream(path.join(__dirname, "log.txt"), {
