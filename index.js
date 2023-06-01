@@ -18,7 +18,11 @@ const Genres = Models.Genre;
 const Directors = Models.Director;
 
 const cors = require("cors");
-let allowedOrigins = ["http://localhost:3000", "http://localhost:1234"];
+let allowedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:1234",
+  "https://myflixpkm.netlify.app/",
+];
 app.use(cors());
 
 const accessLogStream = fs.createWriteStream(path.join(__dirname, "log.txt"), {
@@ -239,7 +243,7 @@ app.delete(
     promise.then((user) => {
       /* checking if the document exists, if it does it gets deleted, if not it responds with was not found */
       if (!user) {
-        res.status(400).send(req.params.Username + " was not found");
+        res.status(404).send(req.params.Username + " was not found");
       } else {
         res.status(200).send(req.params.Username + " was deleted.");
       }
