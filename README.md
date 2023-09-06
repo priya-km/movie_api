@@ -1,14 +1,35 @@
 <h1>MyFlix App</h1>
  
 ## Project Brief
-<p >To build the server-side component of a “movies” web application. The web application will provide users with access to information about different movies, directors, and genres. Users will be able to sign up, update their  personal information, and create a list of their favorite movies. </p>
+<p >This is the server-side component of a “movies” web application called myFlix. myFlix provides users with access to information about different movies, directors, and genres. Users are able to sign up, update their  personal information, and create a list of their favorite movies. </p>
 
 ## Developer Notes
-<p>The front end of this project is currently being built. As of the 3/23 commit the backend and server-side has been built and successfully tested with Postman. The database has been imported to MongoDB Atlas and the app has been deployed on Render.</p>
+<p>The front end of this application is hosted on two domains. One is a React application and the other is built with Angular (see links below). 
+ <br>
+ <br>
+ The backend/server-side has been built and successfully tested with Postman. The database has been imported to MongoDB Atlas and the app has been deployed on Heroku.</p>
  
 ## Links
- [Live View](https://myflixapp.onrender.com/ "Live View")
+<h3>myFlix REACT Web Application:</h3>
+ https://myflixpkm.netlify.app/
     <br>
+    <br>
+ GitHub Repository:
+    <br>
+    https://github.com/priya-km/myFlix-client
+    <br>
+    <br>
+ <h3>myFlix ANGULAR Web Application:</h3>
+ 
+ https://priya-km.github.io/myFlix-Angular-client/welcome
+<br>
+<br>
+GitHub Repository:
+<br>
+https://github.com/priya-km/myFlix-Angular-client
+<br>
+<br>
+ 
 ## API Endpoints
  <li>POST - Allow new users to register - /users</li>
  <li>POST - Allow users to login - /login</li>
