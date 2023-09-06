@@ -83,7 +83,16 @@ app.get("/", (req, res) => {
   res.send("Welcome to myFlix!");
 });
 
-// Create - ADD A USER
+/**
+ * CREATE - Allow new users to register
+ * @name register
+ * @param {string} Username
+ * @param {string} Name
+ * @param {string} Password
+ * @param {string} Email
+ * @param {Date} Birthday
+ * @kind function
+ */
 app.post(
   "/users",
   [
@@ -136,7 +145,12 @@ app.post(
   }
 );
 
-// Get all users
+/**
+ * GET all users
+ * @name users
+ * @kind function
+ * @returns an array of users
+ */
 app.get(
   "/users",
   passport.authenticate("jwt", { session: false }),
@@ -152,7 +166,13 @@ app.get(
   }
 );
 
-// Get information about a specific user by username
+/**
+ * GET a user by username
+ * @name users/Username
+ * @kind function
+ * @param {Username}
+ * @returns a users info by username
+ */
 app.get(
   "/users/:Username",
   passport.authenticate("jwt", { session: false }),
@@ -170,7 +190,14 @@ app.get(
   }
 );
 
-// CREATE - Allow users to add a movie to their list of favorites
+/**
+ * CREATE/POST - Allow a user to add  movie to their favorites
+ * @name User/username/movies/movieID
+ * @kind function
+ * @param {string} username
+ * @param {number} MovieID
+ * @returns a movie id added to the users favorites
+ */
 app.post(
   "/users/:Username/movies/:MovieID",
   passport.authenticate("jwt", { session: false }),
@@ -192,7 +219,17 @@ app.post(
   }
 );
 
-// UPDATE User info
+/**
+ * Update user info
+ * @name register
+ * @param {string} Username
+ * @param {string} Name
+ * @param {string} Password
+ * @param {string} Email
+ * @param {Date} Birthday
+ * @kind function
+ * @returns updated users info
+ */
 app.put(
   "/users/:Username",
   [
@@ -234,7 +271,14 @@ app.put(
   }
 );
 
-// DELETE - Allow users to remove a movie from their list of favorites
+/**
+ * DELETE a movie from users favorites
+ * @name User/username/movies/movieID
+ * @kind function
+ * @param {string} Username
+ * @param {number} movieID
+ * @returns users updated favorites list
+ */
 app.delete(
   "/users/:Username/movies/:MovieID",
   passport.authenticate("jwt", { session: false }),
@@ -256,7 +300,13 @@ app.delete(
   }
 );
 
-// Delete a user by username
+/**
+ * DELETE a user by username
+ * @name users/Username
+ * @kind function
+ * @param {string}
+ * @returns deletes user from database and logs them out, returns user back to home page to sign up or log in
+ */
 app.delete(
   "/users/:Username",
   passport.authenticate("jwt", { session: false }),
@@ -276,7 +326,12 @@ app.delete(
   }
 );
 
-// READ - Get list of all movies
+/**
+ * READ - get list of all movies from the database
+ * @name movies
+ * @kind function
+ * @returns an array of all movies
+ */
 app.get(
   "/movies",
   passport.authenticate("jwt", { session: false }),
@@ -291,7 +346,14 @@ app.get(
       });
   }
 );
-// Find movie by title
+
+/**
+ * GET/READ - Get a movie by title
+ * @name movies/Title
+ * @kind function
+ * @param {string} Title
+ * @returns the movie info
+ */
 app.get(
   "/movies/:Title",
   passport.authenticate("jwt", { session: false }),
@@ -308,7 +370,14 @@ app.get(
   }
 );
 
-// Find movie by genre
+/**
+ * GET/READ - Find a genre by name
+ * @name movies/Genre/genreName
+ * @kind function
+ * @async
+ * @param {string} genreName
+ * @returns genre info
+ */
 app.get(
   "/movies/Genre/:genreName",
   passport.authenticate("jwt", { session: false }),
@@ -325,7 +394,14 @@ app.get(
   }
 );
 
-// Find data about director by name
+/**
+ * GET/READ - Find a genre by name
+ * @name movies/Director/directorName
+ * @kind function
+ * @async
+ * @param {string} directorName
+ * @returns director info
+ */
 app.get(
   "/movies/Director/:directorName",
   passport.authenticate("jwt", { session: false }),

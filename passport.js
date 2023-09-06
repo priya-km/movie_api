@@ -16,6 +16,9 @@ passport.use(
     },
     (username, password, callback) => {
       console.log(username + " " + password);
+      /**
+       * Fetching username and password from the database to see if it matches upon logging in
+       */
       Users.findOne({ Username: username })
         .then((user) => {
           if (!user) {

@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
+/**
+ * Movie model
+ * Contains information that is in each movie document
+ */
 let movieSchema = mongoose.Schema({
   Title: { type: String, required: true },
   Description: { type: String, required: true },
@@ -16,6 +20,11 @@ let movieSchema = mongoose.Schema({
   ImagePath: String,
   Featured: Boolean,
 });
+
+/**
+ * Users model
+ * Contains user info for each user document
+ */
 
 let userSchema = mongoose.Schema({
   Username: { type: String, required: true },
